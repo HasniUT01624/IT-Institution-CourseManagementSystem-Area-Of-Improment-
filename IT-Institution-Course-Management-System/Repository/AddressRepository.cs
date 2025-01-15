@@ -3,13 +3,13 @@ using IT_Institution_Course_Management_System.IRepository;
 
 namespace IT_Institution_Course_Management_System.Repository
 {
-    public class StudentRepository : IStudentRepository
+    public class AddressRepository : IAddressRepository
     {
         private readonly AppDBContext _dbContext;
 
-        public StudentRepository(AppDBContext dBContext)
+        AddressRepository(AppDBContext dbContext)
         {
-            _dbContext = dBContext;
+            _dbContext = dbContext;
         }
     }
 }

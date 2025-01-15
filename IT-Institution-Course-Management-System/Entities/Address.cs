@@ -28,7 +28,7 @@ namespace IT_Institution_Course_Management_System.Entities
             [StringLength(50, ErrorMessage = "Country cannot exceed 50 characters.")]
             public string Country { get; set; } = string.Empty; // Country (mandatory)
 
-            public Guid? StudentId { get; set; } // Foreign key to Student (nullable)
+            public Guid StudentId { get; set; } // Foreign key to Student 
 
             // Reference to the Student class
             public Student? Student { get; set; } // Navigation property for one-to-one relationship

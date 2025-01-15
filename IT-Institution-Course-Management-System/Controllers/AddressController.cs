@@ -6,13 +6,13 @@ namespace IT_Institution_Course_Management_System.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StudentController : ControllerBase
+    public class AddressController : ControllerBase
     {
-        private readonly IStudentService _studentService;
+        private readonly IAddressService _addressService;
 
-        StudentController(IStudentService studentService)
+        AddressController(IAddressService addressService)
         {
-            _studentService = studentService;
+            _addressService = addressService;
         }
     }
 }
