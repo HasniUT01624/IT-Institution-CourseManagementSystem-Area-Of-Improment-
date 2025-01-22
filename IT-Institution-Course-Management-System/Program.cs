@@ -1,5 +1,9 @@
 
 using IT_Institution_Course_Management_System.DBContext;
+using IT_Institution_Course_Management_System.IRepository;
+using IT_Institution_Course_Management_System.IService;
+using IT_Institution_Course_Management_System.Repository;
+using IT_Institution_Course_Management_System.Service;
 using Microsoft.EntityFrameworkCore;
 
 namespace IT_Institution_Course_Management_System
@@ -17,6 +21,8 @@ namespace IT_Institution_Course_Management_System
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<AppDBContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection")));
+            builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+            builder.Services.AddScoped<IStudentService, StudentService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
